@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+/* font-family: "Big Shoulders Display", sans-serif;
+font-family: "Lexend Deca", sans-serif; */
+/* S Global */
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray: hsl(0, 0%, 95%);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+}
+/* E Global */
+section.home {
+  background-color: var(--Very-light-gray);
+  min-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+section.home .container .cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 900px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+section.home .container .cards .card {
+  padding: 40px;
+}
+section.home .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+}
+section.home .container .cards .card h2.tittle {
+  color: var(--Very-light-gray);
+  font-family: "Big Shoulders Display", sans-serif;
+  font-size: 30px;
+}
+section.home .container .cards .card p {
+  color: var(--Transparent-white);
+  line-height: 1.5;
+}
+section.home .container .cards .card:first-child {
+  background-color: var(--Bright-orange);
+}
+section.home .container .cards .card:nth-child(2) {
+  background-color: var(--Dark-cyan);
+}
+section.home .container .cards .card:last-child {
+  background-color: var(--Very-dark-cyan);
+}
+section.home .container .cards .card button.learn {
+  background-color: var(--Very-light-gray);
+  border: 2px solid var(--Very-light-gray);
+  padding: 10px 20px;
+  width: fit-content;
+  border-radius: 40px;
+  margin-top: 60px;
+  transition: 0.3s;
+}
+section.home .container .cards .card:first-child button.learn {
+  color: var(--Bright-orange);
+}
+section.home .container .cards .card:nth-child(2) button.learn {
+  color: var(--Dark-cyan);
+}
+section.home .container .cards .card:last-child button.learn {
+  color: var(--Very-dark-cyan);
+}
+section.home .container .cards .card button.learn:hover {
+  background: none;
+  color: var(--Very-light-gray);
+}
+@media (max-width: 767px) {
+  .container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  section.home .container .cards {
+    grid-template-columns: 1fr;
+  }
+  section.home .container .cards .card button.learn{
+    margin-top: 0;
+  }
+}
